@@ -105,7 +105,7 @@ run_build_script() {
     run_if_present "$build_dir" 'heroku-postbuild'
   elif [[ "$has_build_script" == "true" ]]; then
     mcount "scripts.build"
-    run_build_if_present "$build_dir" 'build'
+    run_build_if_present "$build_dir" 'build:withoutTranslations'
   fi
 }
 
